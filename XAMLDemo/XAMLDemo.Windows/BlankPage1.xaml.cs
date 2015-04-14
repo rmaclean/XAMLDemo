@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -21,24 +20,11 @@ namespace XAMLDemo
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class BlankPage1 : Page
     {
-        public MainPage()
+        public BlankPage1()
         {
             this.InitializeComponent();
         }
-
-        private async void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            while (true)
-            {
-                hours.Value = DateTime.Now.Hour;
-                minutes.Value = DateTime.Now.Minute;
-                seconds.Value = DateTime.Now.Second;
-                await Task.Delay(TimeSpan.FromSeconds(1));
-            }
-        }
     }
-
-
 }

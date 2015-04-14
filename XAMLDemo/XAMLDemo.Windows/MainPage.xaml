@@ -5,9 +5,110 @@
     xmlns:local="using:XAMLDemo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loaded="Page_Loaded">
+    <Page.Resources>
+        <Storyboard x:Name="Storyboard1">
+            <DoubleAnimation Duration="0:0:1" To="268" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="button" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:1" To="246" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="button" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0:0:1" To="#FFF70D0D" Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" Storyboard.TargetName="button" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0:0:1" To="#FF00FF7A" Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="button" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:1" To="-161.255" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="button" d:IsOptimized="True"/>
+        </Storyboard>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid HorizontalAlignment="Left" Height="360" Margin="1198,596,-427,-188" VerticalAlignment="Top" Width="595" RenderTransformOrigin="0.747,0.816">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="77*"/>
+                <RowDefinition Height="103*"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="#FFBF00EC" BorderThickness="10" Grid.Column="1" Grid.Row="1"/>
+            <Border BorderBrush="#FFBF00EC" BorderThickness="10" Grid.Column="1"/>
+            <Border BorderBrush="#FFBF00EC" BorderThickness="10" Margin="0,-52,198,0">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FFC83C3C" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Border BorderBrush="#FFBF00EC" BorderThickness="10" Grid.Row="1"/>
+            <Border BorderBrush="#FFBF00EC" BorderThickness="10">
+                <StackPanel/>
+            </Border>
+        </Grid>
+        <StackPanel HorizontalAlignment="Left" Height="305" Margin="1559,99,-524,0" VerticalAlignment="Top" Width="331" Orientation="Horizontal">
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Background="#FF63F410" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Background="#FFF45F10" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Background="#FFC00C30" Width="100"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="315" Margin="700,476,0,-23" VerticalAlignment="Top" Width="468">
+            <StackPanel Height="34" Orientation="Horizontal">
+                <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock"/>
+                <TextBox x:Name="textBox" TextWrapping="Wrap" Text="TextBox" Width="294"/>
+            </StackPanel>
+            <StackPanel Height="34" Orientation="Horizontal">
+                <TextBlock x:Name="textBlock1" TextWrapping="Wrap">
+                	<Run Text="This is a really really long label for a text box"/>
+                	<LineBreak/>
+                	<Run/>
+                </TextBlock>
+                <TextBox x:Name="textBox1" TextWrapping="Wrap" Text="TextBox" Width="294"/>
+            </StackPanel>
+        </StackPanel>
+        <GridView x:Name="gridView" HorizontalAlignment="Left" Margin="1342,220,-577,0" VerticalAlignment="Top" Width="601" Height="376">
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="Red"/>
+        </GridView>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="406" Margin="758,496,0,-134" VerticalAlignment="Top" Width="435">
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="#FF2AC616"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="#FF2AC616">
+                <Border BorderBrush="Black" BorderThickness="1" Background="#FF2AC616" Margin="0,0,-2,-2"/>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="#FF234AAF"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="#FF2AC616"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="#FF2AC616"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Background="#FF2AC616"/>
+            <Border BorderBrush="Black" BorderThickness="1" Background="#FF2AC616" Height="100" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="1" Background="#FF2AC616" Height="100" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="1" Background="#FF2AC616" Height="100" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="1" Background="#FF2AC616" Height="100" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="1" Background="#FF2AC616" Height="100" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="1" Background="#FF2AC616" Height="100" Width="100"/>
+        </ListView>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="1063,582,0,0" TextWrapping="Wrap" Text="Hello" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Jokerman" FontSize="96" Foreground="#FFFF4E4E" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="360.012"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="278" Margin="1373,535,-263,-45" VerticalAlignment="Top" Width="256" Source="73969-ninja-cat.jpg"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="722,53,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="56" Width="295"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="775,132,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <CompositeTransform/>
+            </Button.RenderTransform>
+        </Button>
+        <ToggleSwitch x:Name="toggleSwitch" Header="ToggleSwitch" HorizontalAlignment="Left" Margin="1033,147,0,0" VerticalAlignment="Top" Height="118" Width="214"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Height="99" Margin="657,287,0,0" VerticalAlignment="Top" Width="590"/>
+        <Slider x:Name="hours" HorizontalAlignment="Left" Margin="55,39,0,0" VerticalAlignment="Top" Width="568" Maximum="24"/>
+        <Slider x:Name="minutes" HorizontalAlignment="Left" Margin="55,87,0,0" VerticalAlignment="Top" Width="568" Maximum="59"/>
+        <Slider x:Name="seconds" HorizontalAlignment="Left" Margin="55,136,0,0" VerticalAlignment="Top" Width="568" Maximum="59"/>
 
     </Grid>
 </Page>
